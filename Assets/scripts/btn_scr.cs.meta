@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 58ca91cb4882f594f99ea10165e4945a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Game: {fileID: 2046298387678481105, guid: 9f6dd5aa71f243c40b487e4aba981db5, type: 3}
+  - AfterGame: {fileID: 3697222066515045042, guid: d08ba533423b18f4cac961b9e8b6e9ce, type: 3}
+  - MainMenu: {fileID: 1420662170714567466, guid: 356af14cfa54c954f8c521a618a8afda, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
