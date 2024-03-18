@@ -5,12 +5,12 @@ public class TargetController : MonoBehaviour
     /// <summary>
     /// Объект анимации уничтожения
     /// </summary>
-    [SerializeField] GameObject objectAnimDestroy;
+    [SerializeField] private GameObject objectAnimDestroy;
 
     /// <summary>
     /// Музыкальный плеер
     /// </summary>
-    [SerializeField] MusPlayer musPlayer;
+    [SerializeField] private MusPlayer musPlayer;
 
     /// <summary>
     /// Вектор скорости вращения
