@@ -1,16 +1,19 @@
 using UnityEngine;
 
+/// <summary>
+/// Класс реализовывающий управление целей
+/// </summary>
 public class TargetController : MonoBehaviour
 {
     /// <summary>
-    /// Объект анимации уничтожения
+    /// Объект частиц при уничтожении
     /// </summary>
     [SerializeField] private GameObject objectAnimDestroy;
 
     /// <summary>
-    /// Музыкальный плеер
+    /// Ссылка на контроллер геймплея
     /// </summary>
-    [SerializeField] private MusPlayer musPlayer;
+    [SerializeField] private GameController gameController;
 
     /// <summary>
     /// Вектор скорости вращения
@@ -26,9 +29,8 @@ public class TargetController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-           /* CreatorController.AddScore(); //TODO
-            CreatorController.targetList.Remove(gameObject);*/
-            
+            gameController.OnDestroyTarget(gameObject);
+
             GameObject _objectAnimDestroy = Instantiate(objectAnimDestroy);
             gameObject.transform.parent = gameObject.transform;
             gameObject.transform.parent = null;
@@ -36,9 +38,9 @@ public class TargetController : MonoBehaviour
             
 
             foreach (Transform child in _objectAnimDestroy.transform)            
-                child.gameObject.GetComponent<SpriteRenderer>().material = GetComponent<SpriteRenderer>().material;      
+                child.gameObject.GetComponent<SpriteRenderer>().material = GetComponent<SpriteRenderer>().material;
 
-            musPlayer.PlaySoundOnClick();
+            MusicPlayer.Instance.PlaySoundOnClick();
             Destroy(gameObject);
         }
     }

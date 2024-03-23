@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Класс реализовывающий эффект взрыва
+/// </summary>
 public class ExplosionEffect : MonoBehaviour
 {   
 	/// <summary>
